@@ -1,5 +1,6 @@
 
 import { FiBookOpen } from "@react-icons/all-files/fi/FiBookOpen";
+import { Link } from "react-router";
 
 const Navbar = () => {
      
@@ -13,12 +14,17 @@ const Navbar = () => {
                 </a>
                 <ul className="hidden items-center gap-6 text-slate-700 md:flex">
                     <li><a href="#features">Features</a></li>
-                    <li><a href="#how-it-works">How It Works</a></li>
+                    <Link to="/features"><li><a href="#features">How It Works</a></li></Link>
+                    <Link to="/how-it-works"><li><a href="#how-it-works">How It Works</a></li></Link>
                     <li><a href="#pricing">Pricing</a></li>
                     <li><a href="#faq">FAQ</a></li>
                 </ul>
                 <div className="flex items-center gap-2">
+                   <Link to="/signin">
+
                     <button className="cursor-pointer rounded-md bg-[#0e7c66] px-4 py-2 font-semibold text-white transition-colors hover:bg-[#0a5d4d] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0e7c66]">Log in</button>
+
+                   </Link> 
                     <button className="cursor-pointer rounded-md bg-[#0e7c66] px-4 py-2 font-semibold text-white transition-colors hover:bg-[#0a5d4d] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0e7c66]">Get started</button>
                 </div>
             </nav>
